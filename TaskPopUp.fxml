@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane fx:id="ap" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="347.0" prefWidth="496.0" style="-fx-background-color: #252839;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="TaskWindowController">
+   <children>
+      <Label fx:id="monthEvents" layoutX="206.0" layoutY="37.0" style="-fx-text-fill: #ffd400;" text="Task List" textFill="#ffd400">
+         <font>
+            <Font name="Lucida Sans Regular" size="33.0" />
+         </font>
+      </Label>
+      <ScrollPane hbarPolicy="NEVER" layoutX="83.0" layoutY="79.0" prefHeight="251.0" prefWidth="397.0" style="-fx-border-style: solid; -fx-background-color: #677077;">
+         <content>
+            <VBox fx:id="list" cacheShape="false" focusTraversable="true" prefHeight="251.0" prefWidth="397.0" style="-fx-background-color: #677077;" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="add" focusTraversable="false" layoutX="14.0" layoutY="79.0" mnemonicParsing="false" onAction="#addTask" prefHeight="22.0" prefWidth="63.0" text="Add">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <tooltip>
+            <Tooltip style="-fx-text-fill: #677077;" text="Add a task" />
+         </tooltip></Button>
+      <Button fx:id="remove" focusTraversable="false" layoutX="14.0" layoutY="114.0" mnemonicParsing="false" onAction="#removeTask" prefHeight="25.0" prefWidth="63.0" text="Remove">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <tooltip>
+            <Tooltip style="-fx-text-fill: #677077;" text="Remove a task" textAlignment="CENTER" />
+         </tooltip></Button>
+      <Button fx:id="edit" focusTraversable="false" layoutX="14.0" layoutY="150.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="63.0" text="Edit">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <tooltip>
+            <Tooltip style="-fx-text-fill: #677077;" text="Edit task" />
+         </tooltip></Button>
+      <MenuBar prefHeight="25.0" prefWidth="506.0">
+        <menus>
+          <Menu fx:id="fileMenu" mnemonicParsing="false" text="File">
+            <items>
+                  <MenuItem fx:id="open" mnemonicParsing="false" onAction="#load" text="Open" />
+                  <MenuItem fx:id="save" mnemonicParsing="false" onAction="#save" text="Save" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+              <MenuItem fx:id="close" mnemonicParsing="false" onAction="#exit" text="Close" />
+            </items>
+          </Menu>
+            <Menu fx:id="editMenu" mnemonicParsing="false" text="Edit">
+              <items>
+                <MenuItem fx:id="clearAll" mnemonicParsing="false" onAction="#clearList" text="Clear All" />
+              </items>
+            </Menu>
+          <Menu fx:id="helpMenu" mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="about" mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <ImageView fx:id="trashcan" fitHeight="100.0" fitWidth="88.0" layoutX="-1.0" layoutY="205.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/clipboard.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

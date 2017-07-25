@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="bp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="218.0" prefWidth="215.0" style="-fx-background-color: #252839;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <FlowPane fx:id="fp1" alignment="CENTER" prefHeight="46.0" prefWidth="215.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextField fx:id="name" alignment="CENTER" prefHeight="32.0" prefWidth="169.0" promptText="Task name here.." style="-fx-background-color: #252839; -fx-text-fill: #f2ff00;">
+               <font>
+                  <Font name="David" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+            </TextField>
+         </children>
+      </FlowPane>
+   </top>
+   <center>
+      <VBox fx:id="vb" prefHeight="95.0" prefWidth="215.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="description" prefHeight="200.0" prefWidth="200.0" promptText="Description..." style="-fx-border-color: #677077; -fx-text-fill: black;" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="2.0" left="8.0" right="8.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="David" size="13.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </TextArea>
+            <FlowPane alignment="CENTER" columnHalignment="RIGHT" prefHeight="25.0" prefWidth="215.0" prefWrapLength="250.0">
+               <children>
+                  <Label fx:id="dueDate" prefHeight="19.0" prefWidth="69.0" text="Due Date:" textFill="#e4e4e4">
+                     <font>
+                        <Font name="Narkisim" size="15.0" />
+                     </font>
+                  </Label>
+                  <DatePicker fx:id="date" prefHeight="25.0" prefWidth="104.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <Lighting>
+                           <bumpInput>
+                              <Shadow />
+                           </bumpInput>
+                           <light>
+                              <Light.Distant />
+                           </light>
+                        </Lighting>
+                     </effect>
+                  </DatePicker>
+               </children>
+               <VBox.margin>
+                  <Insets top="8.0" />
+               </VBox.margin>
+            </FlowPane>
+         </children>
+      </VBox>
+   </center>
+   <bottom>
+      <FlowPane fx:id="fp2" alignment="CENTER" prefHeight="46.0" prefWidth="215.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="ok" mnemonicParsing="false" style="-fx-background-color: #b5b5b7;" text="OK">
+               <font>
+                  <Font name="Eurostile" size="12.0" />
+               </font></Button>
+         </children>
+      </FlowPane>
+   </bottom>
+</BorderPane>
